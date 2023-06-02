@@ -23,7 +23,7 @@ public class AustinPage {
     }
 
     public boolean isUrlCorrect(){
-        return driver.getTitle().equals(url);
+        return driver.getCurrentUrl().equals(url);
     }
 
     public void calendarClick(){
