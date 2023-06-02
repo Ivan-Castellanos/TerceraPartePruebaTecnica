@@ -30,6 +30,6 @@ public class AustinCalendarTest extends BaseTest {
         Assert.assertTrue(austinPage.getCalendarPopUp().isDisplayed());
         austinPage.getCalendarPopUp().close();
         Assert.assertFalse(austinPage.getCalendarPopUp().isDisplayed());
-        logger.info("Able to found calendar and close it.");
+        logger.info("Calendar is able to be found and closed.");
     }
 }
