@@ -1,10 +1,13 @@
-package org.project;
+package org.project.austintest;
 
+import org.project.BaseTest;
+import org.project.pageobjects.AustinPage;
+import org.project.pageobjects.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
-public class AustinCalendarTest extends BaseTest{
+public class AustinCalendarTest extends BaseTest {
     @Test
     public void Test(){
         HomePage homePage = new HomePage(driver).goTo();

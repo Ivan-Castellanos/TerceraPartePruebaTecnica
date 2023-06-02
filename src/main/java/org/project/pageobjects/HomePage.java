@@ -1,13 +1,12 @@
-package org.project;
+package org.project.pageobjects;
 
-import com.beust.ah.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.FindBy;
 
 public class HomePage {
     WebDriver driver;
     static String url = "https://inhouse.decemberlabs.com";
+    
     By navigationBarLocator = By.id("menu-header-main-menu");
     By austinButtonLocator = By.className("city");
     static final String title = "December Labs: UX/UI Design and Mobile App & Web Development";

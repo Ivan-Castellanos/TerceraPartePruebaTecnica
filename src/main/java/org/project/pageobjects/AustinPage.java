@@ -1,4 +1,4 @@
-package org.project;
+package org.project.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ public class AustinPage {
     WebDriver driver;
     static final String title = "Austin Web & App Developers | December Labs";
     static final String url = "https://inhouse.decemberlabs.com/locations/austin/";
-    CalendarPopUp calendarPopUp;
+    public CalendarPopUp calendarPopUp;
 
     By calendarButtonLocator = By.xpath("//a[contains(text(),\"Schedule free consultation\")]");
 
