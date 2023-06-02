@@ -4,13 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AustinPage {
-    WebDriver driver;
-    static final String title = "Austin Web & App Developers | December Labs";
-    static final String url = "https://inhouse.decemberlabs.com/locations/austin/";
-    public CalendarPopUp calendarPopUp;
-
-    By calendarButtonLocator = By.xpath("//a[contains(text(),\"Schedule free consultation\")]");
-
+    private static final String TITLE = "Austin Web & App Developers | December Labs";
+    private static final String URL = "https://inhouse.decemberlabs.com/locations/austin/";
+    protected final WebDriver driver;
+    private final CalendarPopUp calendarPopUp;
+    private final By calendarButtonLocator = By.xpath("//a[contains(text(),\"Schedule free consultation\")]");
 
 
     public AustinPage(WebDriver driver) {
@@ -18,15 +16,19 @@ public class AustinPage {
         calendarPopUp = new CalendarPopUp(driver);
     }
 
-    public boolean isTitleCorrect(){
-        return driver.getTitle().equals(title);
+    public boolean isTitleCorrect() {
+        return driver.getTitle().equals(TITLE);
     }
 
-    public boolean isUrlCorrect(){
-        return driver.getCurrentUrl().equals(url);
+    public boolean isUrlCorrect() {
+        return driver.getCurrentUrl().equals(URL);
     }
 
-    public void calendarClick(){
+    public void calendarClick() {
         driver.findElement(calendarButtonLocator).click();
+    }
+
+    public CalendarPopUp getCalendarPopUp() {
+        return calendarPopUp;
     }
 }

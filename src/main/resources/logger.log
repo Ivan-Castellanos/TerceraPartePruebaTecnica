@@ -1,0 +1,4 @@
+2023-06-01 23:11:19,827 [main] INFO  org.project.BaseTest - Driver initialized
+2023-06-01 23:11:29,202 [main] INFO  org.project.austintest.AustinCalendarTest - Home page is correctly displayed.
+2023-06-01 23:11:33,464 [main] INFO  org.project.austintest.AustinCalendarTest - Austin page is correctly displayed.
+2023-06-01 23:11:33,631 [main] INFO  org.project.austintest.AustinCalendarTest - Able to found calendar and close it.

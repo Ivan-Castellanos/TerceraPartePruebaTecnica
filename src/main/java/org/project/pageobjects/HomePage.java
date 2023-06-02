@@ -4,31 +4,30 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
-    WebDriver driver;
-    static String url = "https://inhouse.decemberlabs.com";
-    
-    By navigationBarLocator = By.id("menu-header-main-menu");
-    By austinButtonLocator = By.className("city");
-    static final String title = "December Labs: UX/UI Design and Mobile App & Web Development";
+    private static final String TITLE = "December Labs: UX/UI Design and Mobile App & Web Development";
+    private static final String URL = "https://inhouse.decemberlabs.com";
+    protected final WebDriver driver;
+    private final By navigationBarLocator = By.id("menu-header-main-menu");
+    private final By austinButtonLocator = By.className("city");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public HomePage goTo(){
-        driver.get(url);
+    public HomePage goTo() {
+        driver.get(URL);
         return this;
     }
 
-    public boolean isTitleCorrect(){
-        return driver.getTitle().equals(title);
+    public boolean isTitleCorrect() {
+        return driver.getTitle().equals(TITLE);
     }
 
-    public boolean isNavBarDisplayed(){
+    public boolean isNavBarDisplayed() {
         return driver.findElement(navigationBarLocator).isDisplayed();
     }
 
-    public AustinPage austinClick(){
+    public AustinPage austinClick() {
         driver.findElement(austinButtonLocator).click();
         return new AustinPage(driver);
     }
